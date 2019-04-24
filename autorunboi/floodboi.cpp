@@ -11,7 +11,7 @@
 #include <Windows.h>
 
 // Defines number of keys to create
-#define NUM_OF_KEYS 100
+#define NUM_OF_KEYS 50
 
 using namespace std;
 
